@@ -1,18 +1,49 @@
-## Getting Started
+# Practica: Estructuras Dinamicas Lineales
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Datos
+- **Nombre:** Juan Cedillo
+- **Curso:** Estructura de Datos
+- **Fecha:** 10 de junio de 2026
 
-## Folder Structure
+## 1. Implementacion de estructuras dinámicas lineales
+**Fecha:** 8 de junio de 2026
 
-The workspace contains two folders by default, where:
+**Descripción:**
+En esta seccion se implementaran las siguiente estructuras dinamicas lineales:
+- Listas enlazadas con LinkedList
+- Pilas con Strack y Deque
+- Colas con Queue
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+### Captura de salida en consola
+![Captura de salida en consola](src/assets/image.png)
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### Captura del código de implementación del ejercicio 1
+Ejercicio 1: Invertir un string utilizando una pila
+![Captura del código de implementación](src/assets/ejercicio1.png)
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## 2. Ejercicio Palíndromo
 
-## Dependency Management
+**Fecha:** 10 de junio de 2026
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+**Descripción:**
+Ejercicio 2: Verifica si un texto es palindromo es decir que se lee igual de izquierda a derecha que de derecha a izquierda.
+
+### Método implementado
+
+````java
+public boolean esPalindromo(String texto) {
+        Stack<Character> pila = new Stack<>();
+        for (char letra : texto.toCharArray()) {
+            pila.push(letra);
+        }
+
+        for (char letra : texto.toCharArray()) {
+            if (letra != pila.pop()) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+
